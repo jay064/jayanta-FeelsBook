@@ -17,9 +17,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="293dp"
         android:layout_height="287dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="52dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -67,60 +65,53 @@
         android:layout_width="302dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Enter comment (Optional)"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="191dp"
-        android:layout_height="23dp"
+        android:layout_width="226dp"
+        android:layout_height="26dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="What do you feel right now?"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/commentAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/optionalComment"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.8" />
-
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_width="395dp"
-        android:layout_height="197dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="94dp"
         android:layout_height="287dp"
         android:layout_marginBottom="8dp"
@@ -130,12 +121,12 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/optionalComment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/loveCount"
@@ -143,7 +134,6 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <TextView
@@ -152,7 +142,6 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <TextView
@@ -161,7 +150,6 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <TextView
@@ -170,7 +158,6 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <TextView
@@ -179,7 +166,6 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
 
         <TextView
@@ -188,8 +174,39 @@
             android:layout_height="47dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="TextView"
             android:textSize="18sp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="59dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Count:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="History"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionalComment" />
 
 </android.support.constraint.ConstraintLayout>

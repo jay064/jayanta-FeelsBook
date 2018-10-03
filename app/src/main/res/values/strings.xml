@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">jayanta-FeelsBook</string>
+    <string name="title_activity_history_">history_Activity</string>
 </resources>
