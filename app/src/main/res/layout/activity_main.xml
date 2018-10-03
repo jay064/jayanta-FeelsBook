@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="391dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="293dp"
+        android:layout_height="287dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="256dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/love"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="LOVE" />
+
+        <Button
+            android:id="@+id/joy"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="JOY" />
+
+        <Button
+            android:id="@+id/fear"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="FEAR" />
+
+        <Button
+            android:id="@+id/anger"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="ANGER" />
+
+        <Button
+            android:id="@+id/sadness"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="SADNESS" />
+
+        <Button
+            android:id="@+id/surprise"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="SURPRISE" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/optionalComment"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter comment (Optional)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="191dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="What do you feel right now?"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridView" />
+
+    <Button
+        android:id="@+id/commentAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="395dp"
+        android:layout_height="197dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="94dp"
+        android:layout_height="287dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/loveCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/joyCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fearCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/angerCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sadnessCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/surpriseCount"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
