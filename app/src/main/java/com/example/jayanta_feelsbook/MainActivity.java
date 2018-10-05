@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Emotion> emotions = new ArrayList<Emotion>();;
     private ArrayAdapter<Emotion> adapter;
 
+    private EditText bodyText;
+
+    public EditText getBodyText() {
+        return bodyText;
+    }
+
     //public ListView getEmotionList() {
        // return EmotionList;
     //}
@@ -57,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
     //public ArrayList<Emotion> getEmotions() {
      //   return emotions;
     //}
+    String comment;
     EmotionList emotionList = new EmotionList();
+    Emotion emotion = new Emotion("emotion");
     Emotion love = new Emotion("love");
     Emotion fear = new Emotion("fear");
     Emotion anger = new Emotion("anger");
@@ -68,52 +76,73 @@ public class MainActivity extends AppCompatActivity {
 
     int count;
 
+    public void optionalComment(View view){
+        String text = bodyText.getText().toString();
+
+        emotion.setComment(text);
+
+        Toast.makeText(this,"Comment Added!",Toast.LENGTH_SHORT).show();
+    }
+
     public void loveText(View view){
         emotionList.addEmotion(love);
+
         count = emotionList.getCount(love, emotionList123);
         TextView countView = (TextView) findViewById(R.id.loveCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"love",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
+
     }
 
     public void fearText(View view){
         emotionList.addEmotion(fear);
+
         count = emotionList.getCount(fear, emotionList123);
         TextView countView = (TextView) findViewById(R.id.fearCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"fear",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
     }
 
     public void angerText(View view){
         emotionList.addEmotion(anger);
+
         count = emotionList.getCount(anger, emotionList123);
         TextView countView = (TextView) findViewById(R.id.angerCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"anger",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
     }
 
     public void surpriseText(View view){
         emotionList.addEmotion(surprise);
+
         count = emotionList.getCount(surprise, emotionList123);
         TextView countView = (TextView) findViewById(R.id.surpriseCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"surprise",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
     }
 
     public void joyText(View view){
         emotionList.addEmotion(joy);
+
         count = emotionList.getCount(joy, emotionList123);
         TextView countView = (TextView) findViewById(R.id.joyCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"joy",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
     }
 
     public void sadnessText(View view){
         emotionList.addEmotion(sadness);
+
         count = emotionList.getCount(sadness, emotionList123);
         TextView countView = (TextView) findViewById(R.id.sadnessCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"sadness",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+
     }
 
 
@@ -128,8 +157,11 @@ public class MainActivity extends AppCompatActivity {
         angerButton = (Button) findViewById(R.id.anger);
         EmotionList = (ListView) findViewById(R.id.EmotionList); //view
         */
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bodyText = (EditText) findViewById(R.id.optionalComment);
 
 
 
@@ -143,14 +175,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-public void viewHistory(View view) {
-    Intent i=new Intent(this, History_activity.class);
-    i.putExtra("emotions", emotionList123);
+    public void viewHistory(View view) {
+        Intent i = new Intent(this, History_activity.class);
+        i.putExtra("emotions", emotionList123);
 
-    startActivity(i);
+        startActivity(i);
 
     }
-
+/*
 
     private void loadFromFile() {
         try {
@@ -181,6 +213,6 @@ public void viewHistory(View view) {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 
 }

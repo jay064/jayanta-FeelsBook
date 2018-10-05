@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-public class EmotionList {
+public class EmotionList{
 
     protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
+    protected String comment ;
 
     public EmotionList(){
         //emotionList = new ArrayList<Emotion>();
@@ -31,5 +32,29 @@ public class EmotionList {
 
     }
 
+/*
+    public String getComment(){
 
-}
+        return comment;
+    }
+    public void setComment(String comment) throws CommentTooLongException {
+        if(comment == null) {
+            setComment("No comment added");
+        }
+        else if (comment.length() <= 100) {
+            this.comment = comment;
+        }
+        else {
+            throw new CommentTooLongException();
+        }
+        Emotion EmoComment = new Emotion(comment);
+        //EmoComment.toString();
+        emotionList.add(emotionList.size(), EmoComment);
+        //notifyAllObservers();
+    }
+*/
+
+    }
+
+
+
