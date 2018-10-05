@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private Button fearButton;
 
 
-
-
-    private ArrayList<Emotion> emotions = new ArrayList<Emotion>();;
+    //private ArrayList<Emotion> emotions = new ArrayList<Emotion>();;
     private ArrayAdapter<Emotion> adapter;
 
     private EditText bodyText;
@@ -55,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //public ListView getEmotionList() {
-       // return EmotionList;
+    // return EmotionList;
     //}
 
     //private ListView EmotionList;
 
     //public ArrayList<Emotion> getEmotions() {
-     //   return emotions;
+    //   return emotions;
     //}
     String comment;
     EmotionList emotionList = new EmotionList();
@@ -72,76 +70,76 @@ public class MainActivity extends AppCompatActivity {
     Emotion surprise = new Emotion("surprise");
     Emotion sadness = new Emotion("sadness");
     Emotion joy = new Emotion("joy");
-    public ArrayList<Emotion> emotionList123 = emotionList.getEmotions();
+    public ArrayList<Emotion> emotions = emotionList.getEmotions();
 
     int count;
 
-    public void optionalComment(View view){
+    public void optionalComment(View view) {
         String text = bodyText.getText().toString();
 
-        emotion.setComment(text);
+        emotion.setComment(text, emotions);
 
-        Toast.makeText(this,"Comment Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Comment Added!", Toast.LENGTH_SHORT).show();
     }
 
-    public void loveText(View view){
+    public void loveText(View view) {
         emotionList.addEmotion(love);
 
-        count = emotionList.getCount(love, emotionList123);
+        count = emotionList.getCount(love, emotions);
         TextView countView = (TextView) findViewById(R.id.loveCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
 
     }
 
-    public void fearText(View view){
+    public void fearText(View view) {
         emotionList.addEmotion(fear);
 
-        count = emotionList.getCount(fear, emotionList123);
+        count = emotionList.getCount(fear, emotions);
         TextView countView = (TextView) findViewById(R.id.fearCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void angerText(View view){
+    public void angerText(View view) {
         emotionList.addEmotion(anger);
 
-        count = emotionList.getCount(anger, emotionList123);
+        count = emotionList.getCount(anger, emotions);
         TextView countView = (TextView) findViewById(R.id.angerCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void surpriseText(View view){
+    public void surpriseText(View view) {
         emotionList.addEmotion(surprise);
 
-        count = emotionList.getCount(surprise, emotionList123);
+        count = emotionList.getCount(surprise, emotions);
         TextView countView = (TextView) findViewById(R.id.surpriseCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void joyText(View view){
+    public void joyText(View view) {
         emotionList.addEmotion(joy);
 
-        count = emotionList.getCount(joy, emotionList123);
+        count = emotionList.getCount(joy, emotions);
         TextView countView = (TextView) findViewById(R.id.joyCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void sadnessText(View view){
+    public void sadnessText(View view) {
         emotionList.addEmotion(sadness);
 
-        count = emotionList.getCount(sadness, emotionList123);
+        count = emotionList.getCount(sadness, emotions);
         TextView countView = (TextView) findViewById(R.id.sadnessCount);
         countView.setText(Integer.toString(count));
-        Toast.makeText(this,"Emotion Added!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Emotion Added!", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -158,11 +156,11 @@ public class MainActivity extends AppCompatActivity {
         EmotionList = (ListView) findViewById(R.id.EmotionList); //view
         */
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         bodyText = (EditText) findViewById(R.id.optionalComment);
-
 
 
     }
@@ -177,42 +175,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void viewHistory(View view) {
         Intent i = new Intent(this, History_activity.class);
-        i.putExtra("emotions", emotionList123);
+        i.putExtra("emotions", emotions);
 
         startActivity(i);
 
     }
-/*
-
-    private void loadFromFile() {
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
-            Gson gson = new Gson();
-            // Taken from https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html 2015-09-22
-            Type listType = new TypeToken<ArrayList<Emotion>>() {}.getType();
-            emotions = gson.fromJson(in, listType);
-        } catch (FileNotFoundException e) {
-            emotions = new ArrayList<Emotion>();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-                    0);
-            OutputStreamWriter writer = new OutputStreamWriter(fos);
-            Gson gson = new Gson();
-            gson.toJson(emotions, writer);
-            writer.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
-
 }
+
+
+
+
+

@@ -10,10 +10,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
+import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class History_activity extends AppCompatActivity {
 
@@ -21,15 +29,15 @@ public class History_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_activity);
-        ListView listView = (ListView)findViewById(R.id.EmotionList);
+        ListView listView = (ListView) findViewById(R.id.EmotionList);
         Intent intent = getIntent();
         final ArrayList<Emotion> my_array_list = (ArrayList<Emotion>) intent.getExtras().getSerializable("emotions");
 
-        final ArrayAdapter adapter = new ArrayAdapter<Emotion>(this,android.R.layout.simple_list_item_1,my_array_list);
+        final ArrayAdapter adapter = new ArrayAdapter<Emotion>(this, android.R.layout.simple_list_item_1, my_array_list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                AlertDialog.Builder adb=new AlertDialog.Builder(History_activity.this);
+                AlertDialog.Builder adb = new AlertDialog.Builder(History_activity.this);
                 adb.setTitle("Delete?");
                 adb.setMessage("Are you sure you want to delete this item?");
                 final int positionToRemove = position;
@@ -38,13 +46,34 @@ public class History_activity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         my_array_list.remove(positionToRemove);
                         adapter.notifyDataSetChanged();
-                    }});
+
+
+                    }
+                });
                 adb.show();
             }
+
+
         });
         //Collection<Emotion> emotions =
         //ArrayList<Emotion> list = new ArrayList<Emotion>();
         //ArrayAdapter<Emotion> emotionAdapter = new ArrayAdapter<Emotion>(this,android.R.layout.simple_list_item_1,list);
     }
+/*
+    private void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME,
+                    0);
+            OutputStreamWriter writer = new OutputStreamWriter(fos);
+            Gson gson = new Gson();
+            gson.toJson(, writer);
+            writer.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+    }*/
 }

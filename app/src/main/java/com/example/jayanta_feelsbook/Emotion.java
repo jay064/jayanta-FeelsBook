@@ -28,16 +28,16 @@ public class Emotion implements Serializable{
         return comment;
     }
 
-    public void setComment(String comment) throws CommentTooLongException {
+    public void setComment(String comment, ArrayList<Emotion> emotionList) throws CommentTooLongException {
         if(comment == null) {
             this.comment = "No comment added";
         }
         else if (comment.length() <= 100) {
             this.comment = comment;
-            //Emotion EmoComment = new Emotion(comment);
-            //int lastIndex = (emotionList.size());
-            //emotionList.add(lastIndex, EmoComment);
-            //this.comment = comment;
+            Emotion EmoComment = new Emotion(comment);
+            int lastIndex = (emotionList.size());
+            emotionList.add(lastIndex, EmoComment);
+            this.comment = comment;
         }
         else {
             throw new CommentTooLongException();
@@ -53,11 +53,10 @@ public class Emotion implements Serializable{
 
     public void setDate(Date date) {
         this.date = date;
-        //notifyAllObservers();
     }
     @Override
     public String toString() {
-        return date + " | " + getEmotion() + " | " + comment;
+        return date + " | " + getEmotion();
     }
 /*
     private volatile ArrayList<MyObserver> observers = new ArrayList<MyObserver>();

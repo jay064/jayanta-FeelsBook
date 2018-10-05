@@ -1,9 +1,17 @@
 package com.example.jayanta_feelsbook;
 
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static android.provider.Telephony.Mms.Part.FILENAME;
 
+//EmotionList will allow the user to perform actions on the list of emotions stored. Adding an emotion to the list, getting the count
 public class EmotionList{
 
     protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
@@ -31,6 +39,8 @@ public class EmotionList{
         return counter;
 
     }
+
+
 
 /*
     public String getComment(){
