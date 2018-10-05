@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-//protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
+
 public class Emotion implements Serializable{
     protected String comment;
     protected String emotion;
@@ -17,7 +17,7 @@ public class Emotion implements Serializable{
     public Emotion(String emotion){
         this.emotion = emotion;
         this.date = new Date();
-        //this.comment = comment;
+
     }
     public String getEmotion(){
         return this.emotion;
@@ -43,8 +43,6 @@ public class Emotion implements Serializable{
             throw new CommentTooLongException();
         }
 
-
-
     }
 
     Date getDate(){
@@ -58,37 +56,6 @@ public class Emotion implements Serializable{
     public String toString() {
         return date + " | " + getEmotion();
     }
-/*
-    private volatile ArrayList<MyObserver> observers = new ArrayList<MyObserver>();
 
-    public void addObserver(MyObserver observer) {
-        observers.add(observer);
-    }
-    private void notifyAllObservers() {
-        for (MyObserver observer : observers) {
-            observer.myNotify(this);
-        }
-    }
-    //protected int count;
-    /*
-    protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
-
-    public void setEmotion(Emotion emotion){
-        //Emotion newEmotion = new Emotion(emotion);
-        emotionList.add(emotion);
-    }
-   /*
-    public int getCount(Emotion emotion, ArrayList<Emotion> emotionList){
-        //Emotion newEmotion = new Emotion(emotion);
-        int counter = 0;
-        for (int i = 0; i < emotionList.size(); i ++) {
-            if (emotionList.get(i).equals(emotion)) {
-                counter++;
-            }
-        }
-        return counter;
-
-    }
-*/
 
 }

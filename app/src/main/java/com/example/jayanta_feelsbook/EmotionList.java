@@ -12,26 +12,27 @@ import java.util.Collection;
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 //EmotionList will allow the user to perform actions on the list of emotions stored. Adding an emotion to the list, getting the count
-public class EmotionList{
+public class EmotionList {
 
     protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
-    protected String comment ;
+    protected String comment;
 
-    public EmotionList(){
+    public EmotionList() {
         //emotionList = new ArrayList<Emotion>();
     }
-    public  ArrayList<Emotion> getEmotions(){
+
+    public ArrayList<Emotion> getEmotions() {
         return emotionList;
     }
 
-    public void addEmotion(Emotion testemotion){
+    public void addEmotion(Emotion testemotion) {
         emotionList.add(testemotion);
     }
 
-    public int getCount(Emotion emotion, ArrayList<Emotion> emotionList){
+    public int getCount(Emotion emotion, ArrayList<Emotion> emotionList) {
         //Emotion newEmotion = new Emotion(emotion);
         int counter = 0;
-        for (int i = 0; i < emotionList.size(); i ++) {
+        for (int i = 0; i < emotionList.size(); i++) {
             if (emotionList.get(i).equals(emotion)) {
                 counter++;
             }
@@ -39,32 +40,7 @@ public class EmotionList{
         return counter;
 
     }
-
-
-
-/*
-    public String getComment(){
-
-        return comment;
-    }
-    public void setComment(String comment) throws CommentTooLongException {
-        if(comment == null) {
-            setComment("No comment added");
-        }
-        else if (comment.length() <= 100) {
-            this.comment = comment;
-        }
-        else {
-            throw new CommentTooLongException();
-        }
-        Emotion EmoComment = new Emotion(comment);
-        //EmoComment.toString();
-        emotionList.add(emotionList.size(), EmoComment);
-        //notifyAllObservers();
-    }
-*/
-
-    }
+}
 
 
 

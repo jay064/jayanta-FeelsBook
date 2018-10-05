@@ -146,16 +146,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*
-        loveButton = (Button) findViewById(R.id.love);
-        fearButton = (Button) findViewById(R.id.fear);
-        sadnessButton = (Button) findViewById(R.id.sadness);
-        joyButton = (Button) findViewById(R.id.joy);
-        surpriseButton = (Button) findViewById(R.id.surprise);
-        angerButton = (Button) findViewById(R.id.anger);
-        EmotionList = (ListView) findViewById(R.id.EmotionList); //view
-        */
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
