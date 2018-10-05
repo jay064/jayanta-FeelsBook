@@ -1,20 +1,24 @@
 package com.example.jayanta_feelsbook;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-//protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
-public class Emotion{
-    public Emotion(String emotion){
-    }
-    //protected int count;
-    /*
+import java.util.Collection;
+
+
+public class EmotionList {
+
     protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
 
-    public void setEmotion(Emotion emotion){
-        //Emotion newEmotion = new Emotion(emotion);
-        emotionList.add(emotion);
+    public EmotionList(){
+        //emotionList = new ArrayList<Emotion>();
     }
-   /*
+    public  ArrayList<Emotion> getEmotions(){
+        return emotionList;
+    }
+
+    public void addEmotion(Emotion testemotion){
+        emotionList.add(testemotion);
+    }
+
     public int getCount(Emotion emotion, ArrayList<Emotion> emotionList){
         //Emotion newEmotion = new Emotion(emotion);
         int counter = 0;
@@ -26,6 +30,4 @@ public class Emotion{
         return counter;
 
     }
-*/
-
 }

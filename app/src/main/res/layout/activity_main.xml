@@ -26,36 +26,42 @@
             android:id="@+id/love"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="loveText"
             android:text="LOVE" />
 
         <Button
             android:id="@+id/joy"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="joyText"
             android:text="JOY" />
 
         <Button
             android:id="@+id/fear"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="fearText"
             android:text="FEAR" />
 
         <Button
             android:id="@+id/anger"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="angerText"
             android:text="ANGER" />
 
         <Button
             android:id="@+id/sadness"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="sadnessText"
             android:text="SADNESS" />
 
         <Button
             android:id="@+id/surprise"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
+            android:onClick="surpriseText"
             android:text="SURPRISE" />
 
     </LinearLayout>
