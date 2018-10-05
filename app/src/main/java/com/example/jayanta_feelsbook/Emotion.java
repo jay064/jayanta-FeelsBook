@@ -3,8 +3,17 @@ package com.example.jayanta_feelsbook;
 import java.io.Serializable;
 import java.util.ArrayList;
 //protected ArrayList<Emotion> emotionList = new ArrayList<Emotion>();
-public class Emotion{
+public class Emotion implements Serializable{
+    protected String emotion;
     public Emotion(String emotion){
+        this.emotion = emotion;
+    }
+    public String getEmotion(){
+        return this.emotion;
+    }
+
+    public String toString(){
+        return getEmotion();
     }
     //protected int count;
     /*

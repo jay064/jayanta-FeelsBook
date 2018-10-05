@@ -142,12 +142,12 @@ public class MainActivity extends AppCompatActivity {
         //loadFromFile();
     }
 
-/*
-public void viewHistory(View view) {
-    Intent intent = new Intent(this, History_activity.class);
 
-    intent.putExtra("emotions", getEmotion());
-    this.startActivity(intent);
+public void viewHistory(View view) {
+    Intent i=new Intent(this, History_activity.class);
+    i.putExtra("emotions", emotionList123);
+
+    startActivity(i);
 
     }
 
@@ -182,5 +182,5 @@ public void viewHistory(View view) {
             throw new RuntimeException(e);
         }
     }
-    */
+
 }
