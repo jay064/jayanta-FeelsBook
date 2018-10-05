@@ -35,15 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String FILENAME = "file.sav";
     private MainActivity activity = this;
 
-    private Button loveButton;
-    private Button joyButton;
-    private Button angerButton;
-    private Button sadnessButton;
-    private Button surpriseButton;
-    private Button fearButton;
-
-
-    //private ArrayList<Emotion> emotions = new ArrayList<Emotion>();;
     private ArrayAdapter<Emotion> adapter;
 
     private EditText bodyText;
@@ -52,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
         return bodyText;
     }
 
-    //public ListView getEmotionList() {
-    // return EmotionList;
-    //}
-
-    //private ListView EmotionList;
-
-    //public ArrayList<Emotion> getEmotions() {
-    //   return emotions;
-    //}
     String comment;
     EmotionList emotionList = new EmotionList();
     Emotion emotion = new Emotion("emotion");
@@ -159,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-        //loadFromFile();
+
     }
 
 

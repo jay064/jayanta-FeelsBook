@@ -30,8 +30,27 @@ public class History_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_activity);
         ListView listView = (ListView) findViewById(R.id.EmotionList);
+
+        /***************************************************************************************
+         *    Title:
+         *    Author(s): Ravind Maurya, Gowthamam M
+         *    Date: answered: January 21st 2014, edited: March 6th 2018
+         *    Code version: <code version>
+         *    Availability: https://stackoverflow.com/questions/2558591/remove-listview-items-in-android
+         *
+         ***************************************************************************************/
+
         Intent intent = getIntent();
         final ArrayList<Emotion> my_array_list = (ArrayList<Emotion>) intent.getExtras().getSerializable("emotions");
+
+        /***************************************************************************************
+         *    Title: Remove listview items in Android
+         *    Author(s): esharp, user6613600
+         *    Date: answered: march 17th 2011, edited: October 17th 2016
+         *    Code version: <code version>
+         *    Availability: https://stackoverflow.com/questions/2558591/remove-listview-items-in-android
+         *
+         ***************************************************************************************/
 
         final ArrayAdapter adapter = new ArrayAdapter<Emotion>(this, android.R.layout.simple_list_item_1, my_array_list);
         listView.setAdapter(adapter);

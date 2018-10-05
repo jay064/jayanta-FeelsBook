@@ -9,6 +9,7 @@ public class Emotion implements Serializable{
     protected String comment;
     protected String emotion;
     protected Date date;
+    //constructors initialised
     public Emotion(String emotion, String comment, Date date)throws CommentTooLongException{
         this.emotion = emotion;
         this.comment = comment;
